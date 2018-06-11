@@ -1,0 +1,49 @@
+{
+	"name": "SFInputImagesList",
+	"version": "0.0.1",
+	"author": [
+		""
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:SFInputImagesList",
+	"descriptionmsg": "sfinputimageslist-desc",
+	"license-name": "MIT",
+	"type": "other",
+	"AutoloadClasses": {
+        "SFInputImagesList": "SFInputImagesList.class.php",
+		"SFInputImagesListHooks": "SFInputImagesList.hooks.php"
+	},
+	"config": {
+		"SFInputImagesListEnableFoo": true
+	},
+	"callback": "SFInputImagesListHooks::onExtensionLoad",
+	"ExtensionMessagesFiles": {
+		"SFInputImagesListAlias": "SFInputImagesList.i18n.alias.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": [
+			"SFInputImagesListHooks::onParserFirstCallInit"
+		]
+	},
+	"MessagesDirs": {
+		"SFInputImagesList": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.sfinputimageslist.foo": {
+			"scripts": [
+				"modules/ext.SFInputImagesList.js",
+				"modules/ext.SFInputImagesList.foo.js"
+			],
+			"styles": [
+				"modules/ext.SFInputImagesList.foo.css"
+			],
+			"position": "bottom"
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "SFInputImagesList"
+	},
+	"manifest_version": 1
+}

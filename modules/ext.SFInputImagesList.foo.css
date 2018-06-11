@@ -1,0 +1,27 @@
+.SFInputImagesList {
+
+}
+
+.SFInputImagesList label {
+    cursor: pointer;
+}
+
+.SFInputImagesList label img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: -20px;
+    border: 2px solid white;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.SFInputImagesList label input[type="checkbox"] {
+
+}
+
+.SFInputImagesList label input[type="checkbox"]:checked + img {
+    border: 2px solid green;
+    filter: none;
+    -webkit-filter: none;
+}
